@@ -18,6 +18,7 @@ const UserSchema = new mongoose.Schema(
     },
     img: {
       type: String,
+      default: "https://i.ibb.co/4pDNDk1/avatar.png",
     },
     city: {
       type: String,
