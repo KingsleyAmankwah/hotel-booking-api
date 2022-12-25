@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 
-export const verifyToken = (req, res, next) => {
+const verifyToken = (req, res, next) => {
   const token = req.cookies.access_token;
   if (!token) {
     res.status(401);
@@ -18,7 +18,7 @@ export const verifyToken = (req, res, next) => {
   });
 };
 
-export const verifyUser = (req, res, next) => {
+const verifyUser = (req, res, next) => {
   verifyToken(req, res, next, () => {
     if (req.user.id === req.params.id || req.user.isAdmin) {
       next();
@@ -29,7 +29,7 @@ export const verifyUser = (req, res, next) => {
   });
 };
 
-export const verifyAdmin = (req, res, next) => {
+const verifyAdmin = (req, res, next) => {
   verifyToken(req, res, next, () => {
     if (req.user.isAdmin) {
       next();
@@ -38,4 +38,10 @@ export const verifyAdmin = (req, res, next) => {
       throw new Error("You are not an authorized admin!");
     }
   });
+};
+
+module.exports = {
+  verifyToken,
+  verifyUser,
+  verifyAdmin,
 };
