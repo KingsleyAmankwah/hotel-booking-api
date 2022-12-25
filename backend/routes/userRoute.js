@@ -5,15 +5,16 @@ const {
   getUser,
   getUsers,
 } = require("../controllers/user");
+const { verifyUser, verifyAdmin } = require("../middlewares/authMiddleware");
 
 const router = express.Router();
 
-router.put("/:id", updateUser);
+router.put("/:id", verifyUser, updateUser);
 
-router.delete("/:id", deleteUser);
+router.delete("/:id", verifyAdmin, deleteUser);
 
-router.get("/:id", getUser);
+router.get("/:id", verifyUser, getUser);
 
-router.get("/", getUsers);
+router.get("/", verifyAdmin, getUsers);
 
 module.exports = router;
