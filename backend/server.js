@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/auth", require("./routes/authRoute"));
 app.use("/api/users", require("./routes/userRoute"));
-// app.use("/api/hotels", require("./routes/hotelRoute"));
+app.use("/api/hotels", require("./routes/hotelRoute"));
 // app.use("/api/rooms", require("./routes/roomsRoute"));
 
 app.use(errorHandler);
