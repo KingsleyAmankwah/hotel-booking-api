@@ -6,13 +6,16 @@ const {
   getHotel,
   getHotels,
 } = require("../controllers/hotel");
+
+const { verifyAdmin } = require("../middlewares/authMiddleware");
+
 const router = express.Router();
 
-router.post("/", createHotel);
+router.post("/", verifyAdmin, createHotel);
 
-router.put("/:id", updateHotel);
+router.put("/:id", verifyAdmin, updateHotel);
 
-router.delete("/:id", deleteHotel);
+router.delete("/:id", verifyAdmin, deleteHotel);
 
 router.get("/find/:id", getHotel);
 
