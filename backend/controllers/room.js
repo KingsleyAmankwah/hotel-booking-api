@@ -25,7 +25,7 @@ const createRoom = asynchandler(async (req, res) => {
   }
 });
 
-const getRoom = async (req, res) => {
+const getRoom = asynchandler(async (req, res) => {
   try {
     const room = await Room.findById(req.params.id);
     res.status(200).json(room);
@@ -33,8 +33,9 @@ const getRoom = async (req, res) => {
     res.status(400);
     throw new Error(error);
   }
-};
-const getRooms = async (req, res) => {
+});
+
+const getRooms = asynchandler(async (req, res) => {
   try {
     const rooms = await Room.find();
     res.status(200).json(rooms);
@@ -42,9 +43,9 @@ const getRooms = async (req, res) => {
     res.status(400);
     throw new Error(error);
   }
-};
+});
 
-const updateRoom = async (req, res) => {
+const updateRoom = asynchandler(async (req, res) => {
   try {
     const updatedRoom = await Room.findByIdAndUpdate(
       req.params.id,
@@ -56,9 +57,9 @@ const updateRoom = async (req, res) => {
     res.status(400);
     throw new Error(error);
   }
-};
+});
 
-const deleteRoom = async (req, res) => {
+const deleteRoom = asynchandler(async (req, res) => {
   const hotelId = req.params.hotelid;
   try {
     await Room.findByIdAndDelete(req.params.id);
@@ -75,7 +76,7 @@ const deleteRoom = async (req, res) => {
     res.status(400);
     throw new Error(error);
   }
-};
+});
 
 module.exports = {
   createRoom,
