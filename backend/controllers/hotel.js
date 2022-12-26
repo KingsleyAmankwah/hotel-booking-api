@@ -1,5 +1,5 @@
 const Hotel = require("../models/hotelModel");
-const Room = require("../models/roomModel");
+// const Room = require("../models/roomModel");
 const asynchandler = require("express-async-handler");
 
 const createHotel = asynchandler(async (req, res) => {
