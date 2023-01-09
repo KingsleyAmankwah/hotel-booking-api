@@ -3,11 +3,11 @@
 ## :sparkles: Features
 
 :heavy_check_mark: User Authentication && Registration;\
+:heavy_check_mark: Edit and Update User Details;\
 :heavy_check_mark: Create and Delete Hotel Details;\
 :heavy_check_mark: Edit and Update Hotel Details;\
 :heavy_check_mark: Create and Delete Room Details;\
-:heavy_check_mark: Edit and Update Room Details;\
-:heavy_check_mark: Edit and Update User Details;\
+:heavy_check_mark: Edit and Update Room Details;
 
 ## :rocket: Technologies
 
