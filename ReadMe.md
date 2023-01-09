@@ -1,6 +1,4 @@
-## :dart: About
-
-Hotel Bookings API
+## :dart: Hotel Booking API
 
 ## :sparkles: Features
 
