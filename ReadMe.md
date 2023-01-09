@@ -5,9 +5,11 @@ Hotel Bookings API
 ## :sparkles: Features
 
 :heavy_check_mark: Authentication && Registration;\
-:heavy_check_mark: Create and Delete Memes;\
-:heavy_check_mark: Edit and Update Memes;\
-:heavy_check_mark: Comment on Memes;
+:heavy_check_mark: Create and Delete Hotel Details;\
+:heavy_check_mark: Edit and Update Hotel Details;\
+:heavy_check_mark: Create and Delete Room Details;\
+:heavy_check_mark: Edit and Update Room Details;\
+:heavy_check_mark: Edit and Update User Details;\
 
 ## :rocket: Technologies
 
